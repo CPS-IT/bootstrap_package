@@ -424,6 +424,16 @@
         max-height: map-get($navbar-heights, xs) - 30;
     }
 }
+a.skip-link:focus {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    background-color: $white;
+    color: $darker;
+    border: 2px solid $darker;
+    outline: 2px solid $white;
+    z-index: 1060;
+}
 @media (min-width: $grid-float-breakpoint) {
     .navbar {
         transition: all .27s cubic-bezier(0, 0, .58, 1) 0s;
