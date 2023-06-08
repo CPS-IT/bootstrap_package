@@ -21,12 +21,15 @@
     }
 }
 .breadcrumb-link {
-    text-decoration: none;
+    text-decoration: underline;
     &:hover {
-        text-decoration: underline;
+        .breadcrumb-link-title {
+            text-decoration: none;
+        }
     }
 }
 .breadcrumb-link-title {
+    text-decoration: underline;
     display: inline-flex;
     align-items: center;
     gap: .25em;
