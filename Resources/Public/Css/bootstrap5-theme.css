@@ -15287,11 +15287,11 @@ a.skip-link:focus {
 }
 
 .breadcrumb-link {
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 .breadcrumb-link:hover {
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 .breadcrumb-link-title {
@@ -16199,7 +16199,7 @@ a.skip-link:focus {
 }
 
 .card-title a {
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 .card-subtitle {
