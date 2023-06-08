@@ -47,10 +47,10 @@ class ExternalMediaUtility
                     'src' => $embedUrl,
                     'frameborder' => '0'
                 ];
-                if ($iframeTitle) {
+                if ($iframeTitle !== '') {
                     $attributes['title'] = $iframeTitle;
                 }
-                if ($class) {
+                if ($class !== '') {
                     $attributes['class'] = $class;
                 }
                 return '<iframe ' . GeneralUtility::implodeAttributes($attributes, true) . ' allowfullscreen></iframe>';
