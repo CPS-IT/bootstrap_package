@@ -15249,11 +15249,11 @@ textarea.form-control.error {
 }
 
 .breadcrumb-link {
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 .breadcrumb-link:hover {
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 .breadcrumb-link-title {
@@ -16151,7 +16151,7 @@ textarea.form-control.error {
 }
 
 .card-title a {
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 .card-subtitle {
