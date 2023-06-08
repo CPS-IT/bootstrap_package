@@ -14490,6 +14490,17 @@ textarea.form-control.error {
   outline: 2px solid #000000;
 }
 
+a.skip-link:focus {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  background-color: #ffffff;
+  color: #212121;
+  border: 2px solid #212121;
+  outline: 2px solid #ffffff;
+  z-index: 1060;
+}
+
 @media (min-width: 992px) {
   .navbar {
     transition: all 0.27s cubic-bezier(0, 0, 0.58, 1) 0s;
