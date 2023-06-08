@@ -765,6 +765,12 @@
             <trans-unit id="external_media">
                 <source>External Media</source>
             </trans-unit>
+            <trans-unit id="field.external_media_iframe_title">
+                <source>External Media iframe Title</source>
+            </trans-unit>
+            <trans-unit id="field.external_media_iframe_title.description">
+                <source>All iframes should have a title attribute containing information about the frame's content. iFrame titles allow screen reader users to learn the purpose of each iframe.</source>
+            </trans-unit>
             <trans-unit id="field.external_media_source">
                 <source>External Media Source</source>
             </trans-unit>

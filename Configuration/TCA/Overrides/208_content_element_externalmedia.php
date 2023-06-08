@@ -68,6 +68,15 @@ $GLOBALS['TCA']['tt_content']['types']['external_media'] = array_replace_recursi
 $GLOBALS['TCA']['tt_content']['columns'] = array_replace_recursive(
     $GLOBALS['TCA']['tt_content']['columns'],
     [
+        'external_media_iframe_title' => [
+            'label' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:field.external_media_iframe_title',
+            'description' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:field.external_media_iframe_title.description',
+            'config' => [
+                'type' => 'input',
+                'size' => 50,
+                'max' => 255,
+            ]
+        ],
         'external_media_source' => [
             'label' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:field.external_media_source',
             'config' => [
@@ -94,6 +103,7 @@ $GLOBALS['TCA']['tt_content']['columns'] = array_replace_recursive(
 // Register palettes
 $GLOBALS['TCA']['tt_content']['palettes']['external_media'] = [
     'showitem' => '
+        external_media_iframe_title, --linebreak--,
         external_media_source, --linebreak--,
         external_media_ratio
     '

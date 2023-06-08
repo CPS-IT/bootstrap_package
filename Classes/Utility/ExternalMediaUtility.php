@@ -29,11 +29,12 @@ class ExternalMediaUtility
      * Get the embed code for the given url if possible
      * and add a css class on the iframe
      *
+     * @param string $iframeTitle
      * @param string $url
      * @param string $class
      * @return string|null
      */
-    public function getEmbedCode(string $url, string $class): ?string
+    public function getEmbedCode(string $iframeTitle, string $url, string $class): ?string
     {
         // Prepare url
         $url = $this->setProtocolToHttps($url);
@@ -42,11 +43,17 @@ class ExternalMediaUtility
         if ($method !== null) {
             $embedUrl = $this->{$method}($url);
             if ($embedUrl !== null) {
-                return '<iframe ' . GeneralUtility::implodeAttributes([
-                        'class' => $class,
-                        'src' => $embedUrl,
-                        'frameborder' => '0'
-                    ], true) . ' allowfullscreen></iframe>';
+                $attributes = [
+                    'src' => $embedUrl,
+                    'frameborder' => '0'
+                ];
+                if ($iframeTitle) {
+                    $attributes['title'] = $iframeTitle;
+                }
+                if ($class) {
+                    $attributes['class'] = $class;
+                }
+                return '<iframe ' . GeneralUtility::implodeAttributes($attributes, true) . ' allowfullscreen></iframe>';
             }
         }
         return null;
