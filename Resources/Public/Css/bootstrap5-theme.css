@@ -15290,11 +15290,12 @@ a.skip-link:focus {
   text-decoration: underline;
 }
 
-.breadcrumb-link:hover {
+.breadcrumb-link:hover .breadcrumb-link-title {
   text-decoration: none;
 }
 
 .breadcrumb-link-title {
+  text-decoration: underline;
   display: inline-flex;
   align-items: center;
   gap: .25em;
